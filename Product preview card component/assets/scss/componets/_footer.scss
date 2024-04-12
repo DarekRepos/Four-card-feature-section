@@ -1,0 +1,27 @@
+@use '../mixin' as r;
+
+.attribution {
+  background-color: var(--c-neutral-very-light-gray);
+  width: 100%;
+  inline-size: 100%;
+  block-size: 4em;
+  display: grid;
+  place-items: center;
+  font-size: var(--f-body);
+  text-align: center;
+  padding-block: 1em 1em;
+  margin-block-start: 1.5rem;
+
+  &__link {
+    color: var(--c-neutral-very-dark-blue);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include r.media-up('sm') {
+    font-size: var(--f-body);
+  }
+}
