@@ -1,0 +1,49 @@
+@use '../utils' as u;
+@use '../mixin' as r;
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    align-items: center;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        color: var(--c-neutral-very-dark-blue);
+        padding-block: 4rem 1rem;
+
+
+        &--normal {
+            font-weight: 200;
+        }
+
+        &--bolded {
+            font-weight: 600;
+        }
+    }
+
+    &__text {
+        font-weight: 200;
+        padding-block-end: 4rem;
+        text-align: center;
+
+        @include r.media-up('sm') {
+            max-width: 50%;
+        }
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(u.rem(310), u.rem(350)));
+        @include r.media-up('sm') {
+            grid-template-columns: repeat(2, minmax(u.rem(310), u.rem(350)));
+        }
+        @include r.media-up('lg') {
+            grid-template-columns: repeat(3, minmax(u.rem(310), u.rem(350)));
+            grid-template-rows: repeat(4, u.rem(120));
+            
+        }
+        //grid-template-rows: repeat(auto-fit, minmax(u.rem(500), 1fr));
+        gap: 1.5rem;
+    }
+}
