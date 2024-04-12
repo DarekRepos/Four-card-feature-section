@@ -1,0 +1,39 @@
+@use 'utils' as u;
+@use 'mixin' as r;
+
+
+
+:root {
+    --c-primary-red: hsl(0, 78%, 62%);
+    --c-primary-cyan: hsl(180, 62%, 55%);
+    --c-primary-orange:  hsl(34, 97%, 64%);
+    --c-primary-blue:  hsl(212, 86%, 64%);
+
+    --c-neutral-very-dark-blue: hsl(234, 12%, 34%);
+    --c-neutral-grayish-blue:  hsl(229, 6%, 66%);
+    --c-neutral-very-light-gray: hsl(0, 0%, 98%);
+
+
+    --f-l: #{u.rem(32)};
+    --f-s: #{u.rem(12)};
+    --f-xs: #{u.rem(8)};
+
+    --f-body: #{u.rem(15)};
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--f-body);
+    color: var( --c-neutral-grayish-blue);
+    line-height: 1.1;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    background-color: var(--c-neutral-very-light-gray);
+}
+
+a {
+    text-decoration: none;
+    transition: 150ms ease-in-out;
+    transition-property: color, background-color;
+}
