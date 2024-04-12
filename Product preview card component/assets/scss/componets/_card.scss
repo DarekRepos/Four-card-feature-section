@@ -1,0 +1,63 @@
+@use '../utils' as u;
+@use '../mixin' as r;
+
+.card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid var(--c-primary-blue);
+    box-shadow: 0px 11px 23px -11px var(--c-neutral-grayish-blue);
+    border-radius: 0.5rem;
+
+
+    &__title {
+        justify-content: center;
+        padding-block-end: 1rem;
+        color: var(--c-neutral-very-dark-blue);
+    }
+
+    &__text {
+        padding-block-end: 1.5rem;
+    }
+
+    &__icon {
+        display: flex;
+        align-self: flex-end;
+
+        @include r.media-up('lg') {
+            padding-block-start: 2em;
+        }
+    }
+
+    &--red {
+        border-top-color: var(--c-primary-red);
+
+        @include r.media-up('lg') {
+            grid-area: 1 / 2 / 3 / 2;
+        }
+    }
+
+    &--cyan {
+        border-top-color: var(--c-primary-cyan);
+
+        @include r.media-up('lg') {
+            grid-area: 2 / 1 / 4 / 2;
+        }
+    }
+
+    &--blue {
+        border-top-color: var(--c-primary-blue);
+
+        @include r.media-up('lg') {
+            grid-area: 2 / 3 / 4/ 4;
+        }
+    }
+
+    &--orange {
+        border-top-color: var(--c-primary-orange);
+
+        @include r.media-up('lg') {
+            grid-area: 3 / 2 / 5 / 3;
+        }
+    }
+}
