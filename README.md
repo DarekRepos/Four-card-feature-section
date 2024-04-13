@@ -29,15 +29,15 @@ Users should be able to:
 
 desktop view
 
-<img alt="desktop view screenshot" src="./docs/screenshots/desktop.png" width="600" height="320">
+<img alt="desktop view screenshot" src="./docs/screenshots/screenshots-desktop.png" width="600" height="320">
 
 tablet view
 
-<img alt="mobile view screenshot" src="./docs/screenshots/tablet.png" width="300" height="600">
+<img alt="mobile view screenshot" src="./docs/screenshots/screenshots-tablet.png" width="300" height="600">
 
 mobile view
 
-<img alt="mobile view screenshot" src="./docs/screenshots/mobile.png" width="300" height="600">
+<img alt="mobile view screenshot" src="./docs/screenshots/screenshots-mobile.png" width="300" height="600">
 
 
 ### Links
