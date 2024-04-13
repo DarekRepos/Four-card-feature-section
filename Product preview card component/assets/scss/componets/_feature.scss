@@ -12,7 +12,7 @@
         flex-direction: column;
         color: var(--c-neutral-very-dark-blue);
         padding-block: 4rem 1rem;
-
+        font-size: var(--f-l);
 
         &--normal {
             font-weight: 200;
@@ -24,7 +24,7 @@
     }
 
     &__text {
-        font-weight: 200;
+        font-weight: 400;
         padding-block-end: 4rem;
         text-align: center;
 
