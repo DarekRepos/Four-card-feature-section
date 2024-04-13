@@ -42,7 +42,7 @@ mobile view
 
 ### Links
 
-- Solution URL: [Solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/four-card-feature-section-qpC9lvlgYr)
 - Live Site URL: [Live site URL here](https://DarekRepos.github.io/Four-card-feature-section/)
 
 ## My process
