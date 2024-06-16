@@ -36,7 +36,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(u.rem(310), u.rem(350)));
         @include r.media-up('sm') {
-            grid-template-columns: repeat(2, minmax(u.rem(245px), u.rem(350)));
+            grid-template-columns: repeat(2, minmax(u.rem(245), u.rem(350)));
         }
         @include r.media-up('lg') {
             grid-template-columns: repeat(3, minmax(u.rem(310), u.rem(350)));
