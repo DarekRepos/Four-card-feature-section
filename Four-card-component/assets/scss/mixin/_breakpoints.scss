@@ -1,42 +1,37 @@
 @use '../utils' as u;
 
-
 $breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1100px,
-  xxl: 1400px,
-  full-hd: 1920px,
+  sm: 36em,       // 576px / 16 = 36em
+  md: 48em,       // 768px / 16 = 48em
+  lg: 62em,       // 992px / 16 = 62em
+  xl: 68.75em,    // 1100px / 16 = 68.75em
+  xxl: 87.5em,    // 1400px / 16 = 87.5em
+  full-hd: 120em, // 1920px / 16 = 120em
 );
 
 // Greater than or equal 
 @mixin media-up($breakpoint-min) {
   $min: map-get($breakpoints, $breakpoint-min);
 
-  @if ($min >=0) {
+  @if ($min >= 0) {
     @media (min-width: $min) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @content;
   }
 }
 
 // Less than or equal
 @mixin media-down($breakpoint-max) {
-  $max: map-get($breakpoints, $breakpoint-max) - 1px;
+  $max: map-get($breakpoints, $breakpoint-max) - 1em;
 
-  @if ($max >=0) {
+  @if ($max >= 0) {
     @media (max-width: $max) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @content;
   }
 }
@@ -44,15 +39,13 @@ $breakpoints: (
 // Equal (>= x and <= y)
 @mixin media-only($breakpoint-min, $breakpoint-max) {
   $min: map-get($breakpoints, $breakpoint-min);
-  $max: map-get($breakpoints, $breakpoint-max) - 1px;
+  $max: map-get($breakpoints, $breakpoint-max) - 1em; 
 
-  @if ($min >=0 AND $max >=$min) {
+  @if ($min >= 0 AND $max >= $min) {
     @media (min-width: $min) AND (max-width: $max) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @content;
   }
 }
